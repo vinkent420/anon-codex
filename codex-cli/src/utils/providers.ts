@@ -4,7 +4,7 @@ export const providers: Record<
 > = {
   openai: {
     name: "OpenAI",
-    baseURL: "https://api.openai.com/v1",
+    baseURL: process.env["OPENAI_BASE_URL"] || "https://api.openai.com/v1",
     envKey: "OPENAI_API_KEY",
   },
   openrouter: {
